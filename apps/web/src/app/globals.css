@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Design tokens — Agency System.
+  Direction: dark professional technology + cybersecurity + premium business
+  software. See MEMORY.md Sections 06–08. Do not introduce ad-hoc colors
+  outside these tokens; extend the token set instead if a new need appears.
+*/
+:root {
+  /* Default to Dark Mode */
+  --bg: #0a0e14;
+  --surface: #10151d;
+  --surface-elevated: #161c26;
+  --border: #232b38;
+  --border-hover: #3b4962;
+  --primary: #3aa0ff;       /* cyber blue — primary accent */
+  --secondary: #8b7cf6;      /* controlled purple — secondary accent, used sparingly */
+  --text: #eef2f7;
+  --text-muted: #8894a6;
+  --text-subtle: #64748b;
+  --success: #34c78e;
+  --warning: #e8b34d;
+  --danger: #e5566a;
+
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.light {
+  /* Premium Smooth Off-White Light Mode */
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --surface-elevated: #f1f5f9;
+  --border: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --primary: #2563eb;       
+  --secondary: #7c3aed;      
+  --text: #0f172a;
+  --text-muted: #475569;
+  --text-subtle: #64748b;
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
+}
+
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+}
+
+* {
+  border-color: var(--border);
+}
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
